@@ -1,7 +1,7 @@
 /*variables*/
 :root {
   --textColor: white;
-  --secondaryTextColor: lightgray;
+  --secondaryTextColor: rgb(165, 165, 165);
   --background: #232323;
   --accent: #fffc38;
   --secondaryBg: #505050;
@@ -24,6 +24,7 @@ header {
   padding: 10px;
   margin-right: 10vw;
   width: 100%;
+  margin-top: 20px;
 }
 
 .title{
@@ -33,23 +34,26 @@ header {
 
 h1 {
     color: var(--accent);
+    padding-top: 5%;
     }
 
 .cursor {
   display: inline-block;
-  padding: 2px;
-  animation: blink 1s step-end infinite;
+  padding-right: 2px;
+  margin-left: -3%;
+  animation: blink 1s infinite step-end;
 }
 
 .yellow {
     color: var(--accent);
+    padding-left: 3%;
 }
 
 /* left side bar */
 
 .left-aside{
     width: 22%;
-    height: 800px;
+    /* height: 800px; */
     float: left;
     margin-right: 5px;
 }
@@ -83,11 +87,49 @@ h1 {
     color: black;
 }
 
+.mybuttons{
+    margin-top: 5%;
+    padding-left: 3%;
+    border: var(--secondaryTextColor) solid 2px;
+}
+.mybuttons div{
+    text-align: center;
+    padding-bottom: 5%;
+}
+
+.buttons{
+    text-align: center;
+}
+
+.changelog{
+    padding: 3%;
+    border: var(--secondaryTextColor) dashed 2px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+.changelog span{
+    color: var(--accent);
+}
+.changelog p{
+    font-size: small;
+    
+}
+.changelog div{
+    height: 90px;
+    overflow-y: scroll;
+    padding-left: 3%;
+    scrollbar-width: none;
+}
+.changelog h3{
+    margin-bottom: -5%;
+    margin-top: 3%;
+}
+
 /* right side bar */
 
 .right-aside{
     width: 22%;
-    height: 800px;
+    /* height: 800px; */
     float: left;
     margin-left: 5px;
     align-items: center;
@@ -99,6 +141,65 @@ h1 {
     margin-top: 10px;
     padding: 5%;
 }
+.info h3{
+    padding-left: 0%;
+}
+
+#status {
+    background-image: url(street-imgs/subway2.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    text-align: center;
+}
+
+#status h3{
+    padding-top: 5%;
+    margin-bottom: -3%;
+}
+
+#status div{
+    background-color: rgba(255, 255, 255, 0.5);
+    color: black;
+    margin: 7%;
+}
+
+#status .date{
+    margin-right: 2%;
+    color: var(--accent);
+}
+
+#todo{
+    border: var(--secondaryTextColor) dashed 2px;
+    padding-left: 2%;
+    margin: 2%;
+}
+#todo h3{
+    margin-bottom: -3%;
+}
+#todo li{
+    margin-left: -5%;
+}
+
+#todo ul{
+    height: 100px;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    scrollbar-color: var(--secondaryBg) var(--background);
+}
+
+.done{
+    text-decoration-line: line-through;
+}
+
+#lastUp{
+    background-image: url(street-imgs/building.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    text-align: center;
+    padding-top: 4%;
+    margin-top: 3%;
+    height: 110px;
+}
 
 /* main blocks */
 
@@ -108,8 +209,11 @@ h1 {
 }
 
 .main-quote {
+    text-align: right;
     float: right;
     margin: 2%;
+    font-size: small;
+    color: var(--secondaryTextColor);
 }
 
 #updates{
@@ -120,7 +224,74 @@ p {
     padding: 3%;
 }
 
+#updates-content{
+    padding-right: 5%;
+    padding-left: 5%;
+    height: 400px;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    scrollbar-color: var(--secondaryBg) var(--background);
+}
 
-   
-   
+.update-title{
+    padding: 1% 3%;
+    background-color: rgba(255, 255, 255, 0.1);
+}
 
+.update-title a:hover{
+    color: var(--accent);
+    cursor: pointer;
+}
+
+.update-content{
+    margin-top: -3%;
+    margin-bottom: -2%;
+    padding-left: 3%;
+    padding-right: 0%;
+}
+
+.date{
+    padding: 0%;
+    padding-right: 2%;
+    text-align: right;
+    font-size: small;
+    color: var(--secondaryTextColor);
+}
+
+#dot1 {
+    position: relative;
+    animation: bounce 2s infinite;
+}
+#dot2 {
+    position: relative;
+    animation: bounce 2s infinite 0.2s;
+}
+
+#dot3 {
+    position: relative;
+    animation: bounce 2s infinite 0.4s;
+}
+
+/* footer */
+
+footer {
+    margin: 5px 0px;
+    width: 100%;
+}
+
+/* animations */
+@keyframes blink {
+  0%   {color: var(--accent);}
+  50% {color: var(--background);}
+}
+
+@keyframes bounce {
+    0% {bottom: 0px;}
+    50% {bottom: 10px;}
+    100% {bottom: 0px;}
+}
+
+@keyframes fancyBorder {
+    0% {border: var(--secondaryTextColor) dashed 2px;}
+    100% {border: var(--secondaryTextColor) solid 2px;}
+}
