@@ -340,16 +340,49 @@ footer {
     margin-bottom: 1%;
 }
 
-/* .content p{
-    margin-bottom: -2%;
-    text-align: justify;
-    text-indent: 5%;
-} */
-summary h3{
-    display: inline-block;
+summary {
     cursor: pointer;
+}
+
+summary h3{
+    display: inline;
     margin-bottom: -2%;
 }
+
+details {
+    margin-top: 10px;
+    padding-top: 5px;
+    margin-left: 3%;
+}
+
+.bookHeading{
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 1% 3%;
+}
+.authorDiv{
+    margin-top: -12px;
+    padding-left: 5%;
+}
+
+.by{
+    font-size: small;
+    color: var(--secondaryTextColor);
+}
+
+.author{
+    color: var(--textColor);
+    font-size:medium;
+}
+
+.aBook {
+    padding: 3%;
+    border: solid var(--secondaryTextColor) 2px;
+    margin-top: 10px;
+}
+.bookTitle{
+    padding-bottom: 0px;
+    margin-top: 0px;
+ }
 
 
 /* animations */
