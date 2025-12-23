@@ -21,7 +21,7 @@
     <nav class="navbar">
         <h3 class="nav-title"><i>Navigation</i></h3>
         <a class="nav-button" href="javascript:void(0);" onclick="homeSwitch()"> Home</a><br>
-        <a class="nav-button" href="javascript:void(0);" onclick="aboutSwitch()"> About</a><br>
+        <a class="nav-button" href="javascript:void(0);" onclick="aboutSwitch()"> About me <img src="emotes/new.gif"></a><br>
         <a class="nav-button" href="javascript:void(0);" onclick="booksSwitch()"> Books</a><br>
         <a class="nav-button" href="javascript:void(0);" onclick="projectsSwitch()"> Projects</a><br>
         <a class="nav-button" href="javascript:void(0);" onclick="blogSwitch()"> Blog</a><br>
@@ -36,6 +36,7 @@
     <div class="changelog">
         <h3 class="yellow">Changelog</h3>
         <div>
+            <p><span>22.12.25:</span> Created About me page and got the pages switcher to work.</p>
             <p><span>20.12.25:</span> Completed layout of Home Page. </p>
             <p><span>19.12.25:</span> Added links to tumblr and guestbook. </p>
         </div>
@@ -66,17 +67,12 @@
     <div id="updates">
         <h2 class="yellow">Recent updates<span id="dot1">.</span><span id="dot2">.</span><span id="dot3">.</span></h2>
         <hr>
-        <div id="updates-content">
+        <div id="updates-content" class="scroll">
             <div class="update">
-                <h4 class="update-title"><a>Title of section</a> > <a>Title of update</a></h4>
-                <p class="update-content"> Preview of the update.<br> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet recusandae iusto molestias dicta placeat, neque ratione. Numquam culpa aspernatur delectus similique sint voluptates modi ex non deserunt minus, nobis mollitia?</p>
-                <p class="date">19-12-2025</p>
-                <hr>
-            </div>
-            <div class="update">
-                <h4 class="update-title"><a>Title of section</a> > <a>Title of update</a></h4>
-                <p class="update-content"> Preview of the update.<br> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet recusandae iusto molestias dicta placeat, neque ratione. Numquam culpa aspernatur delectus similique sint voluptates modi ex non deserunt minus, nobis mollitia?</p>
-                <p class="date">11-12-2025</p>
+                <h3 class="update-title"> <img src="emotes/stars4.gif">About my name</h3>
+                <h5 ><a class="update-section" href="javascript:void(0);" onclick="aboutSwitch()" >About me</a></h5>
+                <p class="update-content"> I've been using the online name Jinx since 2019, after watching the entirety of <i>Teen Titans (2003)</i> with my youngest sister and thinking the character Jinx had a nice design... <span><a href="javascript:void(0);" onclick="aboutSwitch()" >Continue reading</a></span></p>
+                <div class="date">22-12-2025</div>
                 <hr>
             </div>
         </div>
@@ -86,13 +82,13 @@
 <div class="main" id="books"></div>
 <div class="main" id="projects"></div>
 <div class="main" id="blog"></div>
-<div class="main" id="reources"></div>
+<div class="main" id="resources"></div>
 
 <aside class="right-aside">
-    <img src="street-imgs/houses.jpg", width="100%">
+    <img src="street-imgs/houses.jpg" width="100%">
     <br>
-    <div class="info", style="margin: auto;">
-        <h3 class = 'yellow', style="margin: auto;">Info</h3>
+    <div class="info" style="margin: auto;">
+        <h3 class = 'yellow' style="margin: auto;">Info</h3>
         <div>
         Name: Jinx <br>
         Age: 22 <br>
@@ -115,14 +111,15 @@
         <h3 class="yellow">To do</h3>
         <ul>
             <li class="done">Add footer</li>
-            <li class="">Add animations</li>
+            <li class="done">Add animations</li>
             <li>Complete About page</li>
             <li>Add book to list</li>
+            <li>Add credits to Resources page</li>
         </ul>
     </div>
     <div id="lastUp">
         <h3>Last updated</h3>
-        <p>20-12-2025</p>
+        <p>22-12-2025</p>
     </div>
 
 </aside>
