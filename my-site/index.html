@@ -7,6 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script src="script.js" type="text/javascript"></script>
+<script> 
+    let dateUp = "23-12-2025"
+</script>
 </head>
 <body>
 
@@ -23,9 +26,9 @@
         <a class="nav-button" href="javascript:void(0);" onclick="homeSwitch()"> Home</a><br>
         <a class="nav-button" href="javascript:void(0);" onclick="aboutSwitch()"> About me <img src="emotes/new.gif"></a><br>
         <a class="nav-button" href="javascript:void(0);" onclick="booksSwitch()"> Books</a><br>
-        <a class="nav-button" href="javascript:void(0);" onclick="projectsSwitch()"> Projects</a><br>
-        <a class="nav-button" href="javascript:void(0);" onclick="blogSwitch()"> Blog</a><br>
-        <a class="nav-button" href="javascript:void(0);" onclick="resourcesSwitch()"> Resources</a><br>
+        <a class="nav-button" href="javascript:void(0);" onclick="projectsSwitch()" style="color: black;"> Projects</a><br>
+        <a class="nav-button" href="javascript:void(0);" onclick="blogSwitch()" style="color: black;"> Blog</a><br>
+        <a class="nav-button" href="javascript:void(0);" onclick="resourcesSwitch()" style="color: black;"> Resources</a><br>
     </nav>
     <div class="mybuttons">
         <h3 class="yellow">My buttons</h3>
@@ -36,6 +39,7 @@
     <div class="changelog">
         <h3 class="yellow">Changelog</h3>
         <div>
+            <p><span>23.12.25:</span> Created Books page.</p>
             <p><span>22.12.25:</span> Created About me page and got the pages switcher to work.</p>
             <p><span>20.12.25:</span> Completed layout of Home Page. </p>
             <p><span>19.12.25:</span> Added links to tumblr and guestbook. </p>
@@ -69,7 +73,14 @@
         <hr>
         <div id="updates-content" class="scroll">
             <div class="update">
-                <h3 class="update-title"> <img src="emotes/stars4.gif">About my name</h3>
+                <h3 class="update-title"> <img src="emotes/stars4.gif" style="position:relative; bottom: -2px;">My reading list!</h3>
+                <h5 ><a class="update-section" href="javascript:void(0);" onclick="booksSwitch()" >Books</a></h5>
+                <p class="update-content"> I have loved reading ever since I've known how. It was my first hobby, and there was a time when I'd occupy all my free time with books... <span><a href="javascript:void(0);" onclick="booksSwitch()" >Continue reading</a></span></p>
+                <div class="date">23-12-2025</div>
+                <hr>
+            </div>
+            <div class="update">
+                <h3 class="update-title"> <img src="emotes/stars4.gif" style="position:relative; bottom: -2px;">About my name</h3>
                 <h5 ><a class="update-section" href="javascript:void(0);" onclick="aboutSwitch()" >About me</a></h5>
                 <p class="update-content"> I've been using the online name Jinx since 2019, after watching the entirety of <i>Teen Titans (2003)</i> with my youngest sister and thinking the character Jinx had a nice design... <span><a href="javascript:void(0);" onclick="aboutSwitch()" >Continue reading</a></span></p>
                 <div class="date">22-12-2025</div>
@@ -84,46 +95,55 @@
 <div class="main" id="blog"></div>
 <div class="main" id="resources"></div>
 
-<aside class="right-aside" id="right-home">
+<div class="main" id="toBeRead"></div>
+
+<div class="main" id="book-naufrago"></div>
+<div class="main" id="book-principe"></div>
+
+<aside class="right-aside">
     <img src="street-imgs/houses.jpg" width="100%">
     <br>
-    <div class="info" style="margin: auto;">
-        <h3 class = 'yellow' style="margin: auto;">Info</h3>
-        <div>
-        Name: Jinx <br>
-        Age: 22 <br>
-        Country: Argentina</div>
-    </div>
-    <div style="text-align: center; margin-top: 5%; margin-bottom: -5%;">
-        <a href="https://the-displeasure.tumblr.com/" target="_blank"><img src="buttons/tumblr.gif"> </a> 
-        <a href="https://the-displeasure.atabook.org" target="_blank"><img src="buttons/guestbook.gif"></a>
-        <a href="https://github.com/alt-displeasure"> <img src="buttons/github.gif"></a>
-        <!-- source: https://blinkies.cafe/ -->
-    </div>
-    <div id="status">
-        <h3> <i>Status</i> </h3>
-        <div>
-            Attempting to rest (failing).
+    <div id="right-home">
+        <div class="info" style="margin: auto;">
+            <h3 class = 'yellow' style="margin: auto;">Info</h3>
+            <div>
+            Name: Jinx <br>
+            Age: 22 <br>
+            Country: Argentina</div>
         </div>
-        <p class="date">19.12.25</p>
+        <div style="text-align: center; margin-top: 5%; margin-bottom: -5%;">
+            <a href="https://the-displeasure.tumblr.com/" target="_blank"><img src="buttons/tumblr.gif"> </a> 
+            <a href="https://the-displeasure.atabook.org" target="_blank"><img src="buttons/guestbook.gif"></a>
+            <a href="https://github.com/alt-displeasure"> <img src="buttons/github.gif"></a>
+            <!-- source: https://blinkies.cafe/ -->
+        </div>
+        <div id="status">
+            <h3> <i>Status</i> </h3>
+            <div>
+                Attempting to rest (failing).
+            </div>
+            <p class="date">19.12.25</p>
+        </div>
+        <div id="todo">
+            <h3 class="yellow">To do</h3>
+            <ul>
+                <li class="done">Add footer</li>
+                <li class="done">Add animations</li>
+                <li>Complete About page</li>
+                <li>Add book to list</li>
+                <li>Add credits to Resources page</li>
+                <li>Fix last updated</li>
+            </ul>
+        </div>
     </div>
-    <div id="todo">
-        <h3 class="yellow">To do</h3>
-        <ul>
-            <li class="done">Add footer</li>
-            <li class="done">Add animations</li>
-            <li>Complete About page</li>
-            <li>Add book to list</li>
-            <li>Add credits to Resources page</li>
-        </ul>
-    </div>
+    <div id="right-books"></div>
+    
     <div id="lastUp">
         <h3>Last updated</h3>
-        <p>22-12-2025</p>
+        <p id="date-lastUp"></p>
     </div>
 
 </aside>
-<aside class="right-aside" id="right-books"></aside>
 
 <footer style="display: inline-block;">
     <hr>
@@ -153,6 +173,9 @@
 </div> -->
 
 
-
+<script>
+    // Date
+    document.getElementById("date-lastUp").innerHTML = dateUp
+</script>
 </body>
 </html> 

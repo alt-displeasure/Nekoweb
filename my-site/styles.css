@@ -59,6 +59,12 @@ h1 {
     padding-left: 3%;
 }
 
+a {
+    color: var(--textColor);
+    text-decoration: none;
+}
+
+
 /* left side bar */
 
 .left-aside{
@@ -147,11 +153,8 @@ h1 {
     float: left;
     margin-left: 5px;
     align-items: center;
-}
-#right-home{
     width: 22%;
 }
-
 .info {
     margin: auto;
     border: var(--secondaryTextColor) solid 2px;
@@ -247,6 +250,10 @@ p {
     overflow-y: scroll;
     scrollbar-width: thin;
     scrollbar-color: var(--secondaryBg) var(--background);
+}
+.scroll2{
+    overflow-y: scroll;
+    scrollbar-width: none;
 }
 
 #updates-content{
@@ -378,7 +385,7 @@ details {
 
 .aBook {
     padding: 3%;
-    border: solid var(--secondaryTextColor) 2px;
+    border: dashed var(--secondaryTextColor) 2px;
     margin-top: 10px;
 }
 .bookTitle{
@@ -400,6 +407,36 @@ details {
 .books-box{
     float: left;
     height: 100px;
+    width: 26.5%;
+    border: solid var(--secondaryTextColor) 2px;
+    margin: 3% 1%;
+    padding: 0% 2% 5% ;
+    height: 230px;
+    text-indent: 0% ;
+}
+.books-box li{
+    font-size: small;
+    text-align: left;
+}
+
+.back {
+    margin-left: 20px;
+    font-size: small;
+}
+.back a{
+    color: var(--secondaryTextColor);
+}
+
+.main-books a:hover{
+    color: var(--accent);
+    cursor: pointer;
+}
+
+.books-box li::marker{
+    content: "> ";
+}
+.books-box li{
+    margin-left: -18px;
 }
 
 /* animations */
