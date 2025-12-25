@@ -445,6 +445,16 @@ details {
     margin-left: -18px;
 }
 
+#resources-box{
+    border: solid var(--secondaryTextColor) 2px;
+    padding: 5px 3% 0px -10px;
+    height: 500px;
+}
+#resources-box a{
+    text-decoration: underline;
+}
+
+
 /* animations */
 @keyframes blink {
   0%   {color: var(--accent);}

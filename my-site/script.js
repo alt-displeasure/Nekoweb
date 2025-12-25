@@ -67,8 +67,32 @@ function booksSwitch() {
   // content
   $("#books").load("books.html");
   $("#right-books").load("books/aside-books.html");
+  
+}
 
-  document.getElementById("date-lastUp").innerHTML = dateUp;
+function resourcesSwitch() {
+  // mains
+  document.getElementById("home").style.display = "none";
+  document.getElementById("about").style.display = "none";
+  document.getElementById("books").style.display = "none";
+  document.getElementById("blog").style.display = "none";
+  document.getElementById("projects").style.display = "none";
+  document.getElementById("resources").style.display = "block";
+
+  // right asides
+  document.getElementById("right-home").style.display = "block";
+  document.getElementById("right-books").style.display = "none";
+
+  // books
+  document.getElementById("toBeRead").style.display = "none";
+  document.getElementById("book-naufrago").style.display = "none";
+  document.getElementById("book-principe").style.display = "none";
+
+  // size
+  document.getElementById("resources").style.width = "55%";
+
+  // content
+  $("#resources").load("resources.html");
   
 }
 
@@ -96,8 +120,6 @@ function tbrSwitch() {
 
   // content
   $("#toBeRead").load("books/tbr.html");
-
-  document.getElementById("date-lastUp").innerHTML = dateUp
 }
 
 function naufragoSw() {
@@ -123,8 +145,6 @@ function naufragoSw() {
 
   // content
   $("#book-naufrago").load("books/naufrago.html");
-
-  document.getElementById("date-lastUp").innerHTML = dateUp
 }
 
 function princeSw() {
@@ -150,6 +170,4 @@ function princeSw() {
   
   // content
   $("#book-principe").load("books/principe.html");
-
-  document.getElementById("date-lastUp").innerHTML = dateUp
 }
