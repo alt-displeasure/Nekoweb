@@ -448,12 +448,55 @@ details {
 #resources-box{
     border: solid var(--secondaryTextColor) 2px;
     padding: 5px 3% 0px -10px;
-    height: 500px;
+    height: 550px;
 }
 #resources-box a{
     text-decoration: underline;
+    color: var(--accent);
 }
 
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  text-decoration: underline dotted var(--secondaryTextColor);
+  cursor: pointer;
+}
+
+.tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: var(--secondaryBg);
+  color: var(--textColor);
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 150%;
+  left: 50%;
+  margin-left: -60px;
+  font-size: small;
+}
+
+.tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: var(--secondaryBg) transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+blockquote{
+    font-style: italic;
+}
 
 /* animations */
 @keyframes blink {
